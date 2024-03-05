@@ -40,6 +40,20 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          admonitions: {
+            keywords: [
+              "browser-window",
+              "command-with-details",
+              "detail",
+              "detail-danger",
+              "detail-info",
+              "detail-note",
+              "detail-tip",
+              "detail-warning",
+              "image-with-details",
+              "step-by-step",
+            ],
+          },
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
