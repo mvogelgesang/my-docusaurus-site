@@ -1,0 +1,216 @@
+
+/* Custom Admonition, CommandWithDetails */
+.CommandWithDetails {
+  /* Set the text and background color of the code block . */
+  --prism-color: var(--sfdc-prism-color);
+  --prism-background-color: var(--sfdc-prism-background-color);
+  background-color: var(--prism-background-color);
+  border-radius: var(--ifm-code-border-radius);
+  /* Ensure proper space above and below this compound structure. */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* Ensure this compound structure fills the width of the container. */
+  width: 100%;
+}
+.CommandWithDetails .noRadius {
+  /* Kill the border-radius on the bottom of the container. */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0px;
+}
+
+.CommandWithDetails .codeBlockTitle {
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  font-size: var(--ifm-code-font-size);
+  font-weight: 500;
+  padding: 0.75rem var(--ifm-pre-padding);
+}
+
+.CommandWithDetails .CFD_Details {
+  /* Match colors with the code block. */
+  background-color: var(--sfdc-prism-background-color);
+  border-bottom-left-radius: var(--ifm-code-border-radius);
+  border-bottom-right-radius: var(--ifm-code-border-radius);
+  border-color: var(--ifm-color-emphasis-300);
+  border-left-style: none;
+  border-right-style: none;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  /* Ensure the "Details" box appears just below the code block. */
+  margin-bottom: 20px;
+  margin-top: 0px;
+  padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+}
+
+.CommandWithDetails details.CFD_Details > div > div {
+  /* Remove the thin line between the details summary and the hidden content. */
+  border-top-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.CommandWithDetails table {
+  border: none;
+  /* Leave adequate space between the table and things that come before or after. */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* Ensure the table uses the full width of its container. */
+  width: 100%;
+}
+
+.CommandWithDetails thead {
+  /* Create a horizontal line between the header row and the body rows. */
+  border-color: var(--ifm-color-primary-lighter);
+  border-style: solid;
+  border-width: 0px 0px 3px 0px;
+  display: flex;
+  flex-direction: row;
+  /* Set the background color for the header row and make header text bold. */
+  font-weight: bold;
+  width: 100%;
+}
+.CommandWithDetails thead tr {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.CommandWithDetails thead th {
+  align-items: center;
+  border: none;
+  display: inline-flex;
+  /* Ensure content is left-justified and vertically aligned (centered). */
+  justify-content: left;
+  /* Don't allow overflow. If there is overflow, break on spaces if possible. */
+  overflow: hidden;
+  /* Ensure the right cell renders side-by-side with the left cell. */
+  white-space: break-spaces;
+  /* Ensure the right cell takes all space not used by the left cell. */
+  width: 100%;
+}
+
+.CommandWithDetails tbody {
+  display: flex;
+  flex-direction: column;
+  /* Slightly reduce the font size for body row text. */
+  font-size: 0.9em;
+  /* Create a thin horizontal line after each body row. */
+  width: 100%;
+}
+.CommandWithDetails tbody tr {
+  border-color: var(--ifm-color-primary-lighter);
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.CommandWithDetails td:first-child {
+  align-items: center;
+  /* Ensure content is left-justified and vertically aligned (centered). */
+  justify-content: left;
+  margin-right: auto;
+  /* Don't allow overflow. If there is overflow, break on spaces if possible. */
+  overflow: hidden;
+  white-space: break-spaces;
+}
+
+.CommandWithDetails td {
+  align-items: center;
+  border: none;
+  /* Ensure the right cell renders side-by-side with the left cell. */
+  display: inline-flex;
+  /* Ensure content is left-justified and vertically aligned (centered). */
+  justify-content: left;
+  /* Don't allow overflow. If there is overflow, break on normally. */
+  overflow: hidden;
+  white-space: normal;
+  /* Ensure the right cell takes all space not used by the left cell. */
+  width: 100%;
+}
+/* End Custom Admonition, CommandWithDetails */
+
+/* Custom Admonition, DetailSection */
+/* selecting on the details tag ensures the decoration color is properly set. */
+details.DetailSection {
+  --docusaurus-details-decoration-color: var(--ifm-alert-border-color); 
+  --docusaurus-details-transition: transform var(--ifm-transition-fast) ease;
+  margin: 0 0 var(--ifm-spacing-vertical);
+  border: 1px solid var(--ifm-alert-border-color);
+}
+details.DetailSection summary {
+  font: var(--ifm-heading-font-weight) var(--ifm-h5-font-size) / var(--ifm-heading-line-height) var(--ifm-heading-font-family);
+  padding-left: 0rem;
+}
+details.DetailSection summary::before {
+  display: inline-block;
+  position:static;
+  vertical-align: middle;
+}
+/* End Custom Admonition, DetailSection
+
+/* Custom Admonition, ImageWithDetails */
+.ImageWithDetails img {
+  border: 2px;
+  border-color: #181818;
+  border-style: solid;
+}
+/* End Custom Admonition, ImageWithDetails */
+
+/* Custom Admonition, StepByStep */
+.StepByStep {
+  margin: 20px 0;
+}
+
+.StepByStep > div p:first-of-type{
+  font-weight: normal;
+  background-color: var(--ifm-color-primary-contrast-background);
+  padding: 12px;
+  margin-bottom: 5px;
+}
+.StepByStep ol {
+  counter-reset: iwd-counter;
+  list-style: none;
+  margin: var(--ifm-list-margin) 0;
+  padding-bottom: 1px;
+  padding-left: 0px;
+}
+/* for nested lists */
+.StepByStep ol ol {
+  margin: 8px 0 0 32px;
+  position: relative;
+}
+.StepByStep ol li {
+  margin: 0 0 12px 0; 
+  padding-left: 48px;
+  position: relative;
+}
+.StepByStep ol li:last-child {
+  margin: 0; 
+}
+.StepByStep ol li::before {
+  align-items: center;
+  background-color: #fcc003; /* Salesforce brand color "Yellow - 80".  */
+  border-color: #181818; /* Salesforce brand color "Neutral - 10". */
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing:border-box;
+  color: #181818; /* Sets the color of the text inside the circle. */
+  content: counter(iwd-counter);
+  counter-increment: iwd-counter;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: -0.2em;
+  text-align: center;
+  vertical-align: middle;
+  width: 32px;
+}
+/* End Custom Admonition, StepByStep */

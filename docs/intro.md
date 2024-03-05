@@ -4,6 +4,31 @@ sidebar_position: 1
 
 # Tutorial Intro
 
+::::browser-window
+
+  :::detail-note Notes - open me to see the note!
+
+  Note!
+  :::
+
+  :::detail-warning Warning!
+
+  Aaah!
+  :::
+
+::::
+
+:::image-with-details (docusaurus.png)
+
+  Enable Dev Hub features in your PBO.
+
+  1. Open **Setup** and type `dev` in the QuickFind box.
+  2. Open the **Dev Hub** admin page.
+  3. Ensure the **Dev Hub** feature is enabled.
+  4. Ensure the **Unlocked Packages and Second-Generation Managed Packages** feature is enabled.
+
+:::
+
 Let's discover **Docusaurus in less than 5 minutes**.
 
 ## Getting Started
